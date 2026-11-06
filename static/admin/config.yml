@@ -4,6 +4,7 @@ backend:
   name: github
   repo: IslamBinJunaed/islambinjunaed.github.io
   branch: main
+  base_url: https://sveltia-cms-auth.islambinjunaed.workers.dev
 
 site_url: https://islambinjunaed.github.io
 display_url: https://islambinjunaed.github.io
