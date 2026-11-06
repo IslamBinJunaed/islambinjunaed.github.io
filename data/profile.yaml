@@ -1,19 +1,17 @@
+photo: /images/uploads/my.jpeg
 name: Junaed Islam Bin Md
-photo: /images/avatar.svg
 headline: MS Student · Image Restoration & Computer Vision
 affiliation: Department of Global IT Engineering, Kyungsung University
 location: Busan, South Korea
-bio: >-
-  I test new ideas in computer vision, image processing and machine learning
-  through small, honest experiments, and write up what holds and what breaks.
-  My thesis work is on blind removal of mixed Gaussian and impulse noise from RGB images.
+bio: I test new ideas in computer vision, image processing and machine learning through small, honest experiments, and write up what holds and what breaks. My thesis work is on blind removal of mixed Gaussian and impulse noise from RGB images.
 focus:
   - Image denoising
   - Image restoration
   - Vision model robustness
   - Foundation models
+  - Machine Learning
 links:
   github: https://github.com/IslamBinJunaed
-  email: ""
-  linkedin: ""
-  scholar: ""
+  email: islambinmdjunaed@gmail.com
+  linkedin: ''
+  scholar: ''
