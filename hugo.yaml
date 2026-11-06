@@ -2,6 +2,7 @@ baseURL: https://islambinjunaed.github.io/
 locale: en-us
 title: Forward Pass
 theme: PaperMod
+timeZone: Asia/Seoul
 
 enableRobotsTXT: true
 buildDrafts: false

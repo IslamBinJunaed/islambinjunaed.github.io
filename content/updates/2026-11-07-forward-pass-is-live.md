@@ -1,6 +1,6 @@
 ---
 title: "Forward Pass is live"
-date: 2026-11-07
+date: 2026-11-07T00:10:00+09:00
 tags: ["meta"]
 ShowToc: false
 ---
