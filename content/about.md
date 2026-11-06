@@ -1,6 +1,6 @@
 ---
-title: "About"
-layout: "single"
+title: About
+layout: single
 ShowReadingTime: false
 ShowWordCount: false
 ShowShareButtons: false
@@ -19,10 +19,11 @@ I'm **Junaed Islam Bin Md**, a Master's student in the Department of Global IT E
 - predictions and scoring rules written down before running anything
 - controls that change one thing at a time
 - every claim checked with code, not by eye
-- an honest section on what the results *don't* show
+- an honest section on what the results _don't_ show
 
 Negative results are welcome here. Sometimes the most useful finding is where something breaks.
 
 ## Contact
 
 - GitHub: [IslamBinJunaed](https://github.com/IslamBinJunaed)
+- Email:  [islambinmdjunaed@gmail.com](islambinmdjunaed@gmail.com)
