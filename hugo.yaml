@@ -1,0 +1,93 @@
+baseURL: https://islambinjunaed.github.io/
+languageCode: en-us
+title: Forward Pass
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Forward Pass
+  description: "Small, honest experiments in computer vision, image processing and machine learning."
+  keywords: [computer vision, image processing, machine learning, image restoration, denoising]
+  author: Junaed Islam Bin Md
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowToc: true
+  TocOpen: false
+  ShowRssButtonInSectionTermList: true
+
+  editPost:
+    URL: "https://github.com/IslamBinJunaed/islambinjunaed.github.io/blob/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  homeInfoParams:
+    Title: "Forward Pass"
+    Content: >
+      I push new ideas in computer vision, image processing and machine learning
+      through small, careful experiments, and write up what holds, what breaks,
+      and what surprised me.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/IslamBinJunaed"
+    - name: rss
+      url: "index.xml"
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
