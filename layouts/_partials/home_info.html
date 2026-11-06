@@ -1,0 +1,34 @@
+{{- $p := hugo.Data.profile }}
+{{- $exp := len (where site.RegularPages "Section" "posts") }}
+{{- $upd := len (where site.RegularPages "Section" "updates") }}
+<section class="fp-profile">
+  <div class="fp-cover"></div>
+  <div class="fp-profile-body">
+    <img class="fp-avatar" src="{{ $p.photo | relURL }}" alt="{{ $p.name }}" width="132" height="132">
+    <div class="fp-id">
+      <h1 class="fp-name">{{ $p.name }}</h1>
+      {{- with $p.headline }}<p class="fp-headline">{{ . }}</p>{{ end }}
+      <p class="fp-meta">
+        {{- with $p.affiliation }}<span>{{ . }}</span>{{ end }}
+        {{- with $p.location }}<span>{{ . }}</span>{{ end }}
+      </p>
+    </div>
+    {{- with $p.bio }}<p class="fp-bio">{{ . }}</p>{{ end }}
+    {{- with $p.focus }}
+    <div class="fp-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>
+    {{- end }}
+    <div class="fp-stats">
+      <a href="{{ "posts/" | relURL }}"><strong>{{ $exp }}</strong> Experiments</a>
+      <a href="{{ "updates/" | relURL }}"><strong>{{ $upd }}</strong> Updates</a>
+      <a href="{{ "research/" | relURL }}">Research</a>
+      <a href="{{ "about/" | relURL }}">About</a>
+    </div>
+    <div class="fp-links">
+      {{- with $p.links.github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      {{- with $p.links.scholar }}<a href="{{ . }}" target="_blank" rel="noopener">Google Scholar</a>{{ end }}
+      {{- with $p.links.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      {{- with $p.links.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+    </div>
+  </div>
+</section>
+<h2 class="fp-feed-title">Latest</h2>

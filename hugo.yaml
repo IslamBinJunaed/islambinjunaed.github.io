@@ -39,21 +39,10 @@ params:
     Text: "Suggest Changes"
     appendFilePath: true
 
-  profileMode:
-    enabled: true
-    title: "Junaed Islam Bin Md"
-    subtitle: "MS student in Global IT Engineering at Kyungsung University, Busan. I test new ideas in computer vision, image processing and machine learning through small, honest experiments, and write up what holds and what breaks."
-    imageUrl: "/images/avatar.svg"
-    imageTitle: "Junaed Islam Bin Md"
-    imageWidth: 140
-    imageHeight: 140
-    buttons:
-      - name: Blog
-        url: /posts/
-      - name: Research
-        url: /research/
-      - name: About
-        url: /about/
+  mainSections: [posts, updates]
+  homeInfoParams:
+    Title: "Forward Pass"
+    Content: ""
 
   socialIcons:
     - name: github
@@ -64,9 +53,13 @@ params:
 menu:
   main:
     - identifier: posts
-      name: Blog
+      name: Experiments
       url: /posts/
       weight: 10
+    - identifier: updates
+      name: Updates
+      url: /updates/
+      weight: 15
     - identifier: tags
       name: Tags
       url: /tags/

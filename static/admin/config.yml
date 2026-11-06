@@ -1,0 +1,104 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: IslamBinJunaed/islambinjunaed.github.io
+  branch: main
+
+site_url: https://islambinjunaed.github.io
+display_url: https://islambinjunaed.github.io
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: updates
+    label: Updates (short posts)
+    label_singular: Update
+    description: Quick research notes with a photo, like a social media post.
+    folder: content/updates
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - label: Photo
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Hide table of contents, name: ShowToc, widget: hidden, default: false }
+      - { label: Text, name: body, widget: markdown }
+
+  - name: posts
+    label: Experiments (full write-ups)
+    label_singular: Experiment
+    folder: content/posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: One-line summary, name: description, widget: string, required: false }
+      - label: Cover image
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Draft (not published yet), name: draft, widget: boolean, default: false, required: false }
+      - { label: Text, name: body, widget: markdown }
+
+  - name: site
+    label: Profile & Pages
+    files:
+      - name: profile
+        label: My Profile (photo, name, bio, links)
+        file: data/profile.yaml
+        fields:
+          - { label: Profile picture, name: photo, widget: image }
+          - { label: Name, name: name, widget: string }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Affiliation, name: affiliation, widget: string, required: false }
+          - { label: Location, name: location, widget: string, required: false }
+          - { label: Bio, name: bio, widget: text }
+          - { label: Focus areas, name: focus, widget: list, required: false }
+          - label: Links
+            name: links
+            widget: object
+            fields:
+              - { label: GitHub, name: github, widget: string, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+              - { label: Google Scholar, name: scholar, widget: string, required: false }
+      - name: about
+        label: About page
+        file: content/about.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { name: layout, widget: hidden, default: single }
+          - { name: ShowReadingTime, widget: hidden, default: false }
+          - { name: ShowWordCount, widget: hidden, default: false }
+          - { name: ShowShareButtons, widget: hidden, default: false }
+          - { name: ShowToc, widget: hidden, default: false }
+          - { label: Text, name: body, widget: markdown }
+      - name: research
+        label: Research page
+        file: content/research.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { name: layout, widget: hidden, default: single }
+          - { name: ShowReadingTime, widget: hidden, default: false }
+          - { name: ShowWordCount, widget: hidden, default: false }
+          - { name: ShowShareButtons, widget: hidden, default: false }
+          - { name: ShowToc, widget: hidden, default: true }
+          - { label: Text, name: body, widget: markdown }

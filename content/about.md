@@ -7,7 +7,7 @@ ShowShareButtons: false
 ShowToc: false
 ---
 
-<img src="/images/avatar.svg" alt="Junaed Islam Bin Md" width="140" height="140" style="border-radius:50%;display:block;margin:0 0 1.5rem 0;">
+{{< profile-photo >}}
 
 I'm **Junaed Islam Bin Md**, a Master's student in the Department of Global IT Engineering at Kyungsung University in Busan, South Korea. My thesis research is on deep-learning image restoration, especially blind removal of mixed Gaussian and impulse noise from RGB images.
 
