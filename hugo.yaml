@@ -1,5 +1,5 @@
 baseURL: https://islambinjunaed.github.io/
-languageCode: en-us
+locale: en-us
 title: Forward Pass
 theme: PaperMod
 
@@ -39,12 +39,21 @@ params:
     Text: "Suggest Changes"
     appendFilePath: true
 
-  homeInfoParams:
-    Title: "Forward Pass"
-    Content: >
-      I push new ideas in computer vision, image processing and machine learning
-      through small, careful experiments, and write up what holds, what breaks,
-      and what surprised me.
+  profileMode:
+    enabled: true
+    title: "Junaed Islam Bin Md"
+    subtitle: "MS student in Global IT Engineering at Kyungsung University, Busan. I test new ideas in computer vision, image processing and machine learning through small, honest experiments, and write up what holds and what breaks."
+    imageUrl: "/images/avatar.svg"
+    imageTitle: "Junaed Islam Bin Md"
+    imageWidth: 140
+    imageHeight: 140
+    buttons:
+      - name: Blog
+        url: /posts/
+      - name: Research
+        url: /research/
+      - name: About
+        url: /about/
 
   socialIcons:
     - name: github
@@ -62,6 +71,10 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 25
     - identifier: about
       name: About
       url: /about/
